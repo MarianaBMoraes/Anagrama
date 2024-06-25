@@ -14,3 +14,10 @@ process.stdin.on("data", function (data) {
       palavra[i] = palavra[j];
       palavra[j] = aux;
 
+      if (!anagramas.includes(palavra.join(""))) {
+        anagramas.push(palavra.join(""));
+        console.log(palavra.join(""));
+      }
+    }
+  }
+});
